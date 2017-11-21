@@ -28,7 +28,9 @@ app.get('/remove/:id', (req, res) => {
 });
 
 app.post('/word', parser, (req, res) => {
-
+    const { en, vn } = req.body;
+    words.push({ en, vn, id: uid() });
+    res.redirect('/word');
 });
 
 // app.post('/dangnhap', parser, (req, res) => {
