@@ -20,6 +20,17 @@ app.get('/word', (req, res) => {
     res.render('words', { words });
 });
 
+app.get('/remove/:id', (req, res) => {
+    const { id } = req.params;
+    const index = words.findIndex(word => word.id === id);
+    words.splice(index, 1);
+    res.redirect('/word');
+});
+
+app.post('/word', parser, (req, res) => {
+
+});
+
 // app.post('/dangnhap', parser, (req, res) => {
 //     console.log(req.body);
 //     res.send('Dang nhap thanh cong. Chao mung ' + req.body.email);
