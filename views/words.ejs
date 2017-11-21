@@ -19,13 +19,17 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>John</td>
-            <td>Doe</td>
-            <td>john@example.com</td>
-            <td>john@example.com</td>
-            <td>john@example.com</td>
-          </tr>
+          <% words.forEach((word, index)=> { %>
+            <tr>
+                <td><%= index + 1 %></td>
+                <td><%= word.id %></td>
+                <td><%= word.en %></td>
+                <td><%= word.vn %></td>
+                <td>
+                    <a href="#">Remove</a>
+                </td>
+              </tr>
+          <% }) %>
         </tbody>
       </table>
 </body>
