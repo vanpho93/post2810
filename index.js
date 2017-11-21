@@ -17,6 +17,7 @@ app.get('/', (req, res) => res.render('home'));
 
 app.get('/word', (req, res) => {
     //render table words - like remove, update
+    res.render('words');
 });
 
 // app.post('/dangnhap', parser, (req, res) => {
