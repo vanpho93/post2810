@@ -15,10 +15,14 @@ app.use(express.static('public'));
 
 app.get('/', (req, res) => res.render('home'));
 
-app.post('/dangnhap', parser, (req, res) => {
-    console.log(req.body);
-    res.send('Dang nhap thanh cong. Chao mung ' + req.body.email);
+app.get('/word', (req, res) => {
+    //render table words - like remove, update
 });
+
+// app.post('/dangnhap', parser, (req, res) => {
+//     console.log(req.body);
+//     res.send('Dang nhap thanh cong. Chao mung ' + req.body.email);
+// });
 
 app.listen(3000, () => console.log('Server started'));
 
